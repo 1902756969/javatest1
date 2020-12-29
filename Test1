@@ -1,0 +1,15 @@
+import java.util.Scanner;
+	 
+public class Test1 {                
+		public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("请输入要加密的字符串：");
+			String str = sc.nextLine();					//获取用户输入
+			char[] array = str.toCharArray();			//获取字符数组
+			for(int i = 0; i < array.length; i++) {		//遍历数组
+				array[i] = (char)(array[i] ^ 20000);	//对每个数组元素进行异或运算
+			}
+			System.out.println("加密或解密的结果如下");
+			System.err.println(new String(array));		//输出结果
+		}
+	}
